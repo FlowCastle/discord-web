@@ -1392,3 +1392,71 @@ body {
         text-align: center;
     }
 }
+
+/* =======================
+   Página 404 - Quantum
+   ======================= */
+.error-main {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0a1f;
+    box-sizing: border-box;
+    min-height: 70vh;
+}
+
+.error-container {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-container h1 {
+    font-size: 6rem;
+    color: #b78cff;
+    margin-bottom: 20px;
+}
+
+.error-container h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.error-container p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Botón volver al inicio */
+.error-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    color: #b78cff;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.error-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .error-container h1 {
+        font-size: 4rem;
+    }
+
+    .error-container h2 {
+        font-size: 1.5rem;
+    }
+}
