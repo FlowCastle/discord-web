@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum</title>
+    <meta name="description" content="Quantum - Tu asistente inteligente para Discord. Comandos, recursos y módulos en un solo lugar.">
+    <meta name="keywords" content="Quantum, Discord, comandos, recursos, módulos, bot">
+    <meta name="author" content="Quantum Team">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quantum">
+    <meta property="og:description" content="Quantum - Tu asistente inteligente para Discord.">
+    <meta property="og:image" content="../Assets/Images/BotLogo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantumbot.com">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/Images/BotLogo.png" type="image/png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <img src="../Assets/Images/BotLogo.png" alt="Quantum Bot Logo" class="logo">
+            <span class="bot-name">Quantum </span>
+            <button class="menu-btn">Comandos</button>
+            <div class="dropdown">
+                <button class="menu-btn">
+                    Recursos <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Resources/Status">Status</a>
+                    <a href="Support">Soporte</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="menu-btn">
+                    Módulos <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Modules/Roleplay">Roleplay</a>
+                    <a href="Modules/IA">IA</a>
+                    <a href="Modules/Games">Juegos</a>
+                </div>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <button class="premium-btn">Premium</button>
+            <select id="language-switcher">
+                <option value="/es" selected>ES</option>
+                <option value="/en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-box">
+            <div class="hero-text">
+                <h1>Quantum Bot</h1>
+                <p>Tu asistente inteligente para Discord. Administra comandos, explora recursos y módulos fácilmente.</p>
+                <div class="hero-buttons">
+                    <button class="filled-btn">Invitar</button>
+                    <button class="outline-btn">Ver Documentación</button>
+                </div>
+            </div>
+            <div class="hero-logo">
+                <img src="../Assets/Images/BotLogo.png" alt="Quantum Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- M1 -->
+   <section class="resources">
+    <h2>Recursos Destacados</h2>
+    <div class="resources-grid">
+        <div class="resource-card">
+            <img src="../Assets/Images/command.png" alt="Guía de Comandos">
+            <h3>Guía de Comandos</h3>
+            <p>Aprende a usar todos los comandos de Quantum para administrar tu servidor de manera eficiente.</p>
+        </div>
+        <div class="resource-card">
+            <img src="../Assets/Images/security.png" alt="Módulos de Seguridad">
+            <h3>Módulos de Seguridad</h3>
+            <p>Protege tu servidor con módulos de moderación y seguridad integrados, configurables y fáciles de usar.</p>
+        </div>
+        <div class="resource-card">
+            <img src="../Assets/Images/mask.png" alt="Sistema de Roles">
+            <h3>Sistema de Roles</h3>
+            <p>Gestiona roles de manera automática y flexible, adaptando permisos según la actividad y jerarquía de los usuarios.</p>
+        </div>
+        <div class="resource-card">
+            <img src="../Assets/Images/API.png" alt="Documentación API">
+            <h3>Documentación API</h3>
+            <p>Consulta la API de Quantum para integrar funcionalidades avanzadas y crear tus propios módulos personalizados.</p>
+        </div>
+    </div>
+</section>
+
+<!-- F1 -->
+
+<section class="welcome-section">
+    <div class="welcome-box">
+        <div class="welcome-message">
+            <div class="bot-header">
+                <img src="../Assets/Images/BotLogo.png" alt="Quantum Bot Logo" class="bot-logo">
+                <span class="bot-name">Quantum</span>
+                <span class="app-pill">✔ APP</span>
+            </div>
+            <div class="bot-text">
+                <span class="user-mention">@usuario</span> ¡Bienvenido al servidor! Explora todas las funcionalidades de Quantum.
+            </div>
+        </div>
+
+        <div class="welcome-text">
+    <h2>Bienvenidas</h2>
+    <p>Quantum ofrece mensajes de bienvenida personalizados y totalmente a tu manera, con Quantum puedes saludar a cada miembro que se una a tu servidor.</p>
+    <p>Puedes agregar links, botones, imágenes, reglas, canales, y mucho más.</p>
+    <p>Con Quantum, tu servidor será mas acogedor.</p>
+    <a href="#" class="learn-more-btn">Aprender más</a>
+</div>
+</section>
+
+<!-- F2 -->
+<section class="utilities-section">
+    <div class="utilities-box">
+        <div class="utilities-text">
+            <h2>Utilidades Avanzadas</h2>
+            <p>
+                Quantum no es solo comandos. Con sus herramientas de utilidades podrás crear encuestas,
+                recordatorios, roles automáticos y mucho más para mejorar la gestión de tu servidor.
+            </p>
+            <a href="#" class="learn-more-btn">Aprender más</a>
+        </div>
+
+        <div class="utilities-message">
+            <div class="bot-header">
+                <img src="../Assets/Images/BotLogo.png" alt="Bot Logo" class="bot-logo">
+                <span class="bot-name">Quantum</span>
+                <span class="app-pill">✔ APP</span>
+            </div>
+            <div class="bot-text">
+                <span class="user-mention">@usuario</span> Se ha creado una encuesta:  
+                <strong>"¿Cuál es tu juego favorito?"</strong>
+            </div>
+            <div class="bot-text">✅ Minecraft</div>
+            <div class="bot-text">✅ Valorant</div>
+            <div class="bot-text">✅ Fortnite</div>
+        </div>
+    </div>
+</section>
+
+<!-- F3 -->
+<section class="economy-section">
+  <div class="economy-box">
+    <div class="economy-message">
+      <div class="bot-header">
+        <img src="../Assets/Images/BotLogo.png" alt="Bot Logo" class="bot-logo">
+        <span class="bot-name">Quantum</span>
+        <span class="app-pill">✔ APP</span>
+      </div>
+      <div class="bot-text">
+        <span class="user-mention">@usuario</span> Aquí está el top 5 de más ricos en el servidor 💰
+      </div>
+
+      <table class="economy-table">
+        <thead>
+          <tr>
+            <th>Puesto</th>
+            <th>Usuario</th>
+            <th>Monedas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="first" title="El más rico del servidor 🏆">
+            <td>🥇</td>
+            <td>devv0lt</td>
+            <td>150,000</td>
+          </tr>
+          <tr class="second" title="Casi alcanza el primer lugar ⚡">
+            <td>🥈</td>
+            <td>stormvexx</td>
+            <td>120,000</td>
+          </tr>
+          <tr class="third" title="Siempre en el top con esfuerzo 💪">
+            <td>🥉</td>
+            <td>Usuario</td>
+            <td>100,000</td>
+          </tr>
+          <tr title="Va subiendo poco a poco 📈">
+            <td>4</td>
+            <td>Usuario</td>
+            <td>90,000</td>
+          </tr>
+          <tr title="Con constancia llegará al top 🔥">
+            <td>5</td>
+            <td>Usuario</td>
+            <td>80,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="economy-text">
+      <h2>Economía</h2>
+      <p>
+        Quantum incluye un sistema de economía divertido y competitivo.  
+        Compite en rankings, gana monedas con comandos y presume tu lugar en el top de tu servidor.
+      </p>
+      <a href="#" class="learn-more-btn">Aprender más</a>
+    </div>
+  </div>
+</section>
+
+<!-- M2 -->
+<section class="quick-resources-section">
+    <div class="quick-resources-header">
+        <h2>Recursos Rápidos</h2>
+        <p>Accede rápidamente a la documentación, soporte y novedades de Quantum desde aquí.</p>
+    </div>
+
+    <div class="quick-resources-boxes">
+        <div class="quick-box">
+            <img src="../Assets/Images/document.png" alt="Icono 1" class="quick-icon">
+            <h3>Documentación</h3>
+            <p>Accede a toda la información de comandos y módulos de Quantum.</p>
+        </div>
+        <div class="quick-box">
+            <img src="../Assets/Images/support.png" alt="Icono 2" class="quick-icon">
+            <h3>Soporte</h3>
+            <p>Obtén ayuda rápida sobre problemas comunes y configuración.</p>
+        </div>
+        <div class="quick-box">
+            <img src="../Assets/Images/update.png" alt="Icono 3" class="quick-icon">
+            <h3>Actualizaciones</h3>
+            <p>Descubre las novedades y mejoras recientes de Quantum.</p>
+        </div>
+    </div>
+
+    <div class="quick-resources-btn">
+        <a href="#" class="learn-more-btn">Ir a la Wiki</a>
+    </div>
+</section>
+
+<!-- Separator -->
+<section class="cta-section">
+    <div class="cta-box">
+        <h2 class="cta-title">Sumate con Quantum y mejora tu servidor de Discord</h2>
+        <a href="#" class="cta-btn">
+            <img src="../Assets/Images/discord.png" alt="Discord Logo" class="discord-icon">
+            Añadir al Bot
+        </a>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer-section">
+    <div class="footer-top">
+        <div class="footer-left">
+            <div class="footer-logo-name">
+                <img src="../Assets/Images/BotLogo.png" alt="Bot Logo" class="footer-logo">
+                <span class="footer-bot-name">Quantum</span>
+            </div>
+            <p class="footer-bot-message">El bot definitivo para gestionar y mejorar tu servidor de Discord.</p>
+            <div class="footer-buttons">
+                <a href="Invite" class="footer-btn blur-btn">Añadir al Bot</a>
+                <a href="Support" class="footer-btn color-btn">Soporte</a>
+            </div>
+        </div>
+
+        <div class="footer-categories">
+            <div class="footer-category">
+                <h4>Quantum</h4>
+                <a href="Resources/Docs">Documentación</a>
+                <a href="Support/">Soporte</a>
+            </div>
+            <div class="footer-category">
+                <h4>Legal</h4>
+                <a href="Terms-of-Service/">Terminos de Servicio</a>
+                <a href="Privacy-Policies">Politica de Privacidad</a>
+            </div>
+        </div>
+    </div>
+
+    <hr class="footer-separator">
+
+    <div class="footer-bottom">
+        <p>© 2025 Quantum. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

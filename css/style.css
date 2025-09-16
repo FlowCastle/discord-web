@@ -1,0 +1,1394 @@
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0a1f; /* dark theme */
+    color: #fff;
+}
+
+/* Topbar */
+.topbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background: rgba(40, 0, 70, 0.6); /* más transparente para ver blur */
+    backdrop-filter: blur(20px); /* blur más fuerte */
+    -webkit-backdrop-filter: blur(20px); /* soporte Safari */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(55, 0, 85, 0.8);
+}
+
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.bot-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #b78cff; /* destacado violeta */
+}
+
+.menu-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #1b0c36;
+    min-width: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-direction: column;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #350049;
+}
+
+.dropdown.open .dropdown-content {
+    display: flex;
+}
+
+.arrow {
+    transition: transform 0.25s;
+}
+
+.dropdown.open .arrow {
+    transform: rotate(180deg);
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.premium-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #b78cff;
+    backdrop-filter: blur(8px);
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #b78cff;
+    font-weight: bold;
+}
+
+/* Hover para botones de topbar */
+.menu-btn:hover {
+    background-color: rgba(183, 140, 255, 0.2); /* ligero violeta */
+    border-radius: 6px;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.premium-btn:hover {
+    background: rgba(183, 140, 255, 0.1); /* ligero blur violeta al pasar */
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+
+#language-switcher {
+    background: #1b0c36;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    padding: 0px 0px;
+}
+
+.hero-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b0c36;
+    padding: 80px 50px;
+    /*border-radius: 15px;*/
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #b78cff; /* violeta destacado */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.hero-buttons button {
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-right: 15px;
+}
+
+.filled-btn {
+    background: #b78cff;
+    border: none;
+    color: #fff;
+}
+
+.filled-btn:hover {
+    background: #a061f0;
+    transform: scale(1.05);
+}
+
+.outline-btn {
+    background: transparent;
+    border: 2px solid #b78cff;
+    color: #b78cff;
+}
+
+.outline-btn:hover {
+    background: rgba(183, 140, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.hero-logo img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .topbar-left {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-box {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Sección de recursos */
+.resources {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #0f0a1f; /* dark theme consistente */
+}
+
+.resources h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #b78cff; /* violeta destacado */
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resource-card {
+    background-color: #1b0c36;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+}
+
+.resource-card img {
+    width: 90px;            /* ancho fijo */
+    height: 90px;           /* alto fijo */
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: contain;     /* mantiene proporción y no recorta PNG */
+    background-color: #2b0c45; /* fondo para resaltar PNG transparentes */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;           /* espacio alrededor de la imagen */
+}
+
+.resource-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #b78cff;
+}
+
+.resource-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Hover efecto */
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(183, 140, 255, 0.4);
+}
+
+/* Sección bienvenida / mensaje */
+.welcome-section {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #1b0c36; /* fondo más claro */
+}
+
+.welcome-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Simulación mensaje estilo Discord */
+.welcome-message {
+    background-color: #2b1b50; /* burbuja estilo chat */
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.bot-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bot-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.bot-name {
+    font-weight: bold;
+    color: #b78cff;
+}
+
+.app-pill {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bot-text {
+    font-size: 0.95rem;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.user-mention {
+    color: #27b3ff;
+    font-weight: bold;
+}
+
+/* Contenido derecho */
+.welcome-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px; /* un poco más amplio para dar espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 🔹 alineado arriba */
+    align-items: flex-start;     /* 🔹 alineado a la izquierda */
+    gap: 15px;
+    text-align: left;            /* 🔹 texto alineado izquierda */
+}
+
+.welcome-text h2 {
+    font-size: 2rem;
+    color: #b78cff;
+}
+
+.welcome-text p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+    width: 100%; /* 🔹 el texto usa todo el ancho disponible */
+}
+
+/* Botón aprender más con blur */
+.learn-more-btn {
+    display: block; /* 🔹 hace que ocupe toda la línea */
+    width: 100%;    /* 🔹 mismo ancho que el texto */
+    text-align: center;
+    text-decoration: none;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    padding: 12px 0; /* 🔹 más alto, no más ancho */
+    border-radius: 6px;
+    color: #b78cff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.learn-more-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.02); /* un hover más suave */
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcome-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .welcome-message, .welcome-text {
+        max-width: 100%;
+    }
+}
+
+/* Sección utilidades */
+.utilities-section {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #1b0c36; /* mismo fondo que bienvenida */
+}
+
+.utilities-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Simulación mensaje estilo Discord */
+.utilities-message {
+    background-color: #2b1b50;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Texto a la izquierda */
+.utilities-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+}
+
+.utilities-text h2 {
+    font-size: 2rem;
+    color: #b78cff;
+}
+
+.utilities-text p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Botón igual */
+.utilities-text .learn-more-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    padding: 12px 0;
+    border-radius: 6px;
+    color: #b78cff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.utilities-text .learn-more-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .utilities-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .utilities-message, .utilities-text {
+        max-width: 100%;
+    }
+}
+
+/* Sección economía */
+.economy-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #1b0c36;
+}
+
+.economy-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Burbuja estilo Discord */
+.economy-message {
+  background-color: #2b1b50;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 450px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Tabla de ranking */
+.economy-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; /* separación entre filas */
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.economy-table th {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #b78cff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.economy-table td {
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+}
+
+/* Hover */
+.economy-table tr {
+  transition: transform 0.2s, background 0.2s;
+  cursor: default;
+}
+.economy-table tr:hover td {
+  background: rgba(183,140,255,0.2);
+  transform: scale(1.02);
+}
+
+/* Colores especiales top 3 */
+.economy-table .first td {
+  background: linear-gradient(90deg, #FFD700, #b8860b);
+  color: #000;
+  font-weight: bold;
+}
+.economy-table .second td {
+  background: linear-gradient(90deg, #C0C0C0, #808080);
+  color: #000;
+  font-weight: bold;
+}
+.economy-table .third td {
+  background: linear-gradient(90deg, #cd7f32, #5a2d0c);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Texto explicativo */
+.economy-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  text-align: left;
+}
+
+.economy-text h2 {
+  font-size: 2rem;
+  color: #b78cff;
+}
+
+.economy-text p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+  width: 100%;
+}
+
+/* Botón */
+.economy-text .learn-more-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid #b78cff;
+  padding: 12px 0;
+  border-radius: 6px;
+  color: #b78cff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.economy-text .learn-more-btn:hover {
+  background: rgba(183,140,255,0.2);
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .economy-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .economy-message, .economy-text {
+    max-width: 100%;
+  }
+}
+
+/* Sección de recursos rápidos */
+.quick-resources-section {
+    width: 100%;
+    padding: 60px 80px; /* padding lateral para que no toque los bordes */
+    background-color: #0f0a1f; /* color nuevo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+/* Contenedor de boxes */
+.quick-resources-boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px; /* para que no se estire demasiado */
+}
+
+/* Cada box */
+.quick-box {
+    position: relative;
+    flex: 1; /* ocupa espacio equitativo */
+    padding: 30px 20px 20px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+    border: 2px solid #b78cff; /* solo borde */
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover efecto */
+.quick-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(183,140,255,0.4);
+}
+
+/* Header de la sección */
+.quick-resources-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quick-resources-header h2 {
+    font-size: 2rem;
+    color: #b78cff;
+    margin: 0 0 10px 0;
+}
+
+.quick-resources-header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+    max-width: 800px;
+}
+
+
+/* Icono en esquina superior */
+/* Icono dentro de la caja, esquina superior izquierda */
+.quick-box .quick-icon {
+    position: relative;       /* ahora es relativo al flujo normal */
+    top: 0;
+    left: 0;
+    width: 40px;              /* tamaño fijo */
+    height: 40px;
+    border-radius: 50%;       /* opcional, si quieres circular */
+    margin-bottom: -10px;      /* separa el icono del título */
+    background: transparent;  /* sin fondo */
+}
+
+
+/* Título y descripción */
+.quick-box h3 {
+    font-size: 1.2rem;
+    color: #b78cff;
+    margin: 0;
+}
+
+.quick-box p {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Botón centrado debajo */
+.quick-resources-btn {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quick-resources-btn .learn-more-btn {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    padding: 8px 12px;   /* menos ancho y alto */
+    border-radius: 6px;
+    color: #b78cff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    display: inline-block; /* se ajusta al contenido */
+    width: auto;           /* no ocupa todo el ancho */
+    text-align: center;
+}
+
+.quick-resources-btn .learn-more-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .quick-resources-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-box {
+        width: 80%;
+    }
+}
+
+/* Sección CTA lado a lado con gradiente */
+.cta-section {
+    width: 100%;
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #0f0a1f 0%, #1b0c36 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Caja central */
+.cta-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background: transparent; /* sin fondo interno */
+    padding: 20px 30px;
+    border-radius: 12px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Título */
+.cta-title {
+    font-size: 2rem;
+    color: #b78cff;
+    margin: 0;
+    flex: 1; /* ocupa espacio disponible */
+}
+
+/* Botón Añadir al Bot */
+.cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: #b78cff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.cta-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.05);
+}
+
+.cta-btn .discord-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-title {
+        margin-bottom: 15px;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/*Footer*/
+.footer-section {
+    width: 100%;
+    background-color: #0f0a1f;
+    color: #ccc;
+    padding: 40px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Parte superior: logo + mensaje + botones + categorías */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Logo, nombre, mensaje y botones */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Logo y nombre en línea */
+.footer-logo-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.footer-bot-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #b78cff;
+}
+
+/* Mensaje debajo */
+.footer-bot-message {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-top: 8px;
+    max-width: 300px;
+}
+
+/* Botones debajo del mensaje */
+.footer-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Botones ya definidos (blur y color) */
+.blur-btn {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    color: #b78cff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.blur-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.05);
+}
+
+.color-btn {
+    background: #b78cff;
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.color-btn:hover {
+    background: #9a63e0;
+    transform: scale(1.05);
+}
+
+/* Resto del footer se mantiene igual */
+
+
+/* Botón colorido */
+.color-btn {
+    background: #b78cff;
+    border: none;
+    color: #fff;
+}
+
+.color-btn:hover {
+    background: #9a63e0;
+    transform: scale(1.05);
+}
+
+/* Categorías */
+.footer-categories {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-category h4 {
+    font-size: 1.1rem;
+    color: #b78cff;
+    margin-bottom: 10px;
+}
+
+.footer-category a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.footer-category a:hover {
+    color: #b78cff;
+}
+
+/* Separador */
+.footer-separator {
+    border: 0;
+    border-top: 1px solid #350049;
+    margin: 0;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-left {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-categories {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+/* Contenedor principal */
+.tos-main {
+    width: 100%;
+    background-color: #0f0a1f;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.tos-container {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(27,12,54,0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tos-container h1 {
+    font-size: 2.5rem;
+    color: #b78cff;
+    text-align: center;
+}
+
+.tos-container h2 {
+    font-size: 1.5rem;
+    color: #b78cff;
+    margin-bottom: 10px;
+}
+
+.tos-subsection h3 {
+    font-size: 1.2rem;
+    color: #b78cff;
+    margin-left: 15px; /* indent para jerarquía */
+    margin-bottom: 5px;
+}
+
+.tos-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-left: 0;
+}
+
+/* Sub-sub secciones si quieres más jerarquía */
+.tos-subsubsection {
+    margin-left: 30px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Separación entre secciones */
+.tos-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tos-container {
+        padding: 30px 20px;
+    }
+
+    .tos-container h1 {
+        font-size: 2rem;
+    }
+
+    .tos-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .tos-subsection h3 {
+        font-size: 1.1rem;
+    }
+}
+
+.invite-main {
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #0f0a1f; /* Fondo principal */
+    box-sizing: border-box;
+}
+
+.invite-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.invite-container h1 {
+    color: #b78cff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.invite-container p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Botones de invitación */
+.invite-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.invite-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.invite-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Blur button */
+.blur-btn {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    color: #b78cff;
+}
+
+.blur-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.05);
+}
+
+/* Color button */
+.color-btn {
+    background: #b78cff;
+    color: #0f0a1f;
+}
+
+.color-btn:hover {
+    background: #a164ff;
+    transform: scale(1.05);
+}
+
+/* Feature boxes */
+.invite-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 250px;
+    background-color: #1b0c36;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(183,140,255,0.4);
+}
+
+.feature-box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    color: #b78cff;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .invite-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .invite-btn {
+        width: 200px;
+        justify-content: center;
+    }
+}
+
+/* =======================
+   Página de Soporte - Quantum
+   ======================= */
+.support-main {
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #0f0a1f; /* fondo principal */
+    box-sizing: border-box;
+}
+
+.support-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.support-container h1 {
+    color: #b78cff;
+    font-size: 2.5rem;
+}
+
+.support-container p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Cajas de soporte */
+.support-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.support-box {
+    flex: 1;
+    min-width: 250px;
+    background-color: #1b0c36;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.support-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(183,140,255,0.4);
+}
+
+.support-box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.support-box h3 {
+    color: #b78cff;
+    margin-bottom: 10px;
+}
+
+.support-box p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Botones en cajas de soporte */
+.support-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.support-btn.blur-btn {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid #b78cff;
+    color: #b78cff;
+}
+
+.support-btn.blur-btn:hover {
+    background: rgba(183,140,255,0.2);
+    transform: scale(1.05);
+}
+
+.support-btn.color-btn {
+    background: #b78cff;
+    color: #0f0a1f;
+}
+
+.support-btn.color-btn:hover {
+    background: #a164ff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .support-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .support-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
